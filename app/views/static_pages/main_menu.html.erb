@@ -1,2 +1,14 @@
 <% provide(:title, "Inicio") %>
-<p>Work in progress</p>
+<div class="container-fluid bg-2" >
+  <div class="row">
+
+
+      <% @options.each do |opcion| %>
+        <div class="col-xs-12">
+          <%= link_to opcion, "#", class: "btn btn-default" %>
+        </div>
+      <% end %>
+
+
+  </div>
+</div>

@@ -6,8 +6,37 @@
   color: #ffffff;
 }
 
+.bg-2 {
+  background-color: $gray-light;
+  color: #ffffff;
+}
+
 .container-fluid {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
   text-align: center;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  
+}
+
+/* Header */
+
+#logo {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
 }
