@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.bg-1 {
+  background-color: #1abc9c; /* Green */
+  color: #ffffff;
+}
+
+.container-fluid {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
