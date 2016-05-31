@@ -1,0 +1,23 @@
+<div class="bg-2">
+<%= form_for(@categoria) do |f| %>
+  <% if @categoria.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@categoria.errors.count, "error") %> prohibited this categoria from being saved:</h2>
+
+      <ul>
+      <% @categoria.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field-tm">
+    <%= f.label :name, "Nombre de la categoría:" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div >
+    <%= f.submit "Crear Categoría", class: "btn btn-default"%>
+  </div>
+<% end %>
+</div>

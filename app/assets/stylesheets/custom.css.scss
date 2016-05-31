@@ -9,6 +9,7 @@
 .bg-2 {
   background-color: $gray-light;
   color: #ffffff;
+  /* margin-top: 1px; */
 }
 
 .container-fluid {
@@ -33,6 +34,12 @@
   color: #ffffff;
 }
 
+.field-tm {
+  background-color: $gray-light;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
 /* Header */
 
 #logo {
@@ -48,4 +55,19 @@
     color: black;
     text-decoration: none;
   }
+}
+
+/* Forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #3d5c5c;
+  /* @include box_sizing; */
+}
+
+input {
+  height: auto !important;
 }
