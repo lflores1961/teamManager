@@ -1,12 +1,13 @@
+<div class="bg-2 container-fluid">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Categorias</h1>
+<h4>Listado de Categorías</h4>
 
-<table>
+<table class="center">
   <thead>
     <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
+      <th>Nombre</th>
+      <th colspan="3">Acciones</th>
     </tr>
   </thead>
 
@@ -14,8 +15,8 @@
     <% @categorias.each do |categoria| %>
       <tr>
         <td><%= categoria.name %></td>
-        <td><%= link_to 'Edit', edit_categoria_path(categoria) %></td>
-        <td><%= link_to 'Destroy', categoria, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Modificar', edit_categoria_path(categoria) %></td>
+        <td><%= link_to 'Eliminar', categoria, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +24,5 @@
 
 <br>
 
-<%= link_to 'New Categoria', new_categoria_path %>
+<%= link_to 'Categoría Nueva', new_categoria_path, class: "btn btn-default cust-button" %>
+</div>
