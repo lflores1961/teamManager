@@ -1,7 +1,11 @@
 class StaticPagesController < ApplicationController
 
   def main_menu
-    @options = %w(Registro_de_Jugadores Registro_de_Pagos Mantenimiento
-    Consulta_Jugador Reporte_Global_PDF) 
+    @options = [
+      {:letrero => "Registro de Jugadores", :ruta => '#'},
+      {:letrero => "Registro de Pagos",     :ruta => '#'},
+      {:letrero => "Mantenimiento",         :ruta => 'mant_menus_menuMant_path'},
+      {:letrero => "Consulta Jugador",      :ruta => '#'},
+      {:letrero => "Reporte Global PDF",    :ruta => '#'}]
   end
 end

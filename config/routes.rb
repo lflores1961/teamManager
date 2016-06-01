@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'mant_menus/menuMant'
+
   resources :categorias
 
   root 'static_pages#main_menu'

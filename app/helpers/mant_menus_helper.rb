@@ -1,0 +1,2 @@
+module MantMenusHelper
+end

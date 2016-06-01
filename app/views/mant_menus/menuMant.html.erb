@@ -1,0 +1,15 @@
+<% provide(:title, "Mantenimiento") %>
+<div class="container-fluid bg-2" >
+  <div class="row">
+
+
+      <% @opciones_mant.each do |opcion| %>
+        <div class="col-xs-12">
+          <%= link_to opcion[:letrero], eval(opcion[:ruta]),
+          class: "btn btn-default cust-button" %>
+        </div>
+      <% end %>
+
+
+  </div>
+</div>
