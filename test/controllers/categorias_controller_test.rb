@@ -21,7 +21,7 @@ class CategoriasControllerTest < ActionController::TestCase
       post :create, categoria: { name: "testnew" }
     end
 
-    assert_redirected_to categoria_path(assigns(:categoria))
+    assert_redirected_to categorias_path
   end
 
   test "should show categoria" do
@@ -36,7 +36,7 @@ class CategoriasControllerTest < ActionController::TestCase
 
   test "should update categoria" do
     patch :update, id: @categoria, categoria: { name: @categoria.name }
-    assert_redirected_to categoria_path(assigns(:categoria))
+    assert_redirected_to categorias_path
   end
 
   test "should destroy categoria" do

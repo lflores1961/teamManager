@@ -4,6 +4,28 @@
 /* Variables */
 
 $my-green: #1abc9c;
+$gray-medium-light: #eaeaea;
+
+/* universal */
+
+body {
+  padding-top: 0px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
 
 .bg-1 {
   background-color: $my-green; /* Green */
@@ -23,14 +45,21 @@ $my-green: #1abc9c;
 }
 
 .btn-default {
-  color: #ffffff;
+  color: white;
   background-color: $my-green;
   border-color: $my-green;
+  a:visited {
+    color: white;
+  }
 }
 
 .cust-button {
   width: 170px !important;
   margin: 7px 2px;
+}
+
+.button:visited {
+    color: white;
 }
 
 .footer {
@@ -47,12 +76,12 @@ table, th, td {
     border: 1px solid white;
     padding: 5px;
     border-radius: 5px;
-  }
+}
 
 table {
     border-spacing: 10px;
     background-color: $my-green;
-  }
+}
 
 table.center {
   margin-left: auto;
@@ -63,6 +92,44 @@ th,td {
     background-color: $my-green;
     color: white;
   }
+
+p#notice {
+  color: $my-green;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
 
 /* Header */
 
