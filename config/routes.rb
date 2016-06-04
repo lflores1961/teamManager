@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :conceptos
+
   get 'mant_menus/menuMant'
 
   resources :categorias

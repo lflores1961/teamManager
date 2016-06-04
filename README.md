@@ -1,6 +1,7 @@
 # Team Manager
-This is my second try to build a simple tool to help
-sports teams managers to handle money handling.
+This is a attempt to create a helpfull tool for any amateur sports organization
+basically with payments. The goal is to distribute the basic app freely
+and then charge a subscription and monthly fee for more sophisticated features.
 
 This app will be designed for mobile devices using bootstrap
 and nothing out of the world about money handling, just a 

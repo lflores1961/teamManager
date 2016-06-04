@@ -1,0 +1,30 @@
+<div class="bg-2 container-fluid">
+<p id="notice"><%= notice %></p>
+
+<h1>Listado de Conceptos</h1>
+
+<table class="center">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tarifa</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conceptos.each do |concepto| %>
+      <tr>
+        <td><%= concepto.name %></td>
+        <td><%= concepto.tarifa %></td>
+        <td><%= link_to 'Modificar', edit_concepto_path(concepto) %></td>
+        <td><%= link_to 'Eliminar', concepto, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Concepto', new_concepto_path, class: "btn btn-default cust-button" %>
+</div>

@@ -2,7 +2,7 @@
 <%= form_for(@categoria) do |f| %>
   <% if @categoria.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@categoria.errors.count, "error") %> prohibited this categoria from being saved:</h2>
+      <h2><%= pluralize(@categoria.errors.count, "errores") %> impidieron que la categoría se guarde:</h2>
 
       <ul>
       <% @categoria.errors.full_messages.each do |message| %>
