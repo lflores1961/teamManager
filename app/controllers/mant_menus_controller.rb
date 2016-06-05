@@ -4,7 +4,7 @@ class MantMenusController < ApplicationController
     @opciones_mant = [
       {:letrero => "Conceptos",   :ruta => 'conceptos_path'},
       {:letrero => "Categorías",  :ruta => 'categorias_path'},
-      {:letrero => "Jugadores",   :ruta => '#'},
+      {:letrero => "Jugadores",   :ruta => 'jugadores_path'},
       {:letrero => "Usuarios",    :ruta => '#'} ]
   end
 

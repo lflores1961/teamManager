@@ -1,7 +1,8 @@
+<% provide(:title, "Conceptos") %>
 <div class="bg-2 container-fluid">
 <p id="notice"><%= notice %></p>
 
-<h1>Listado de Conceptos</h1>
+<h4>Listado de Conceptos</h4>
 
 <table class="center">
   <thead>
@@ -16,7 +17,7 @@
     <% @conceptos.each do |concepto| %>
       <tr>
         <td><%= concepto.name %></td>
-        <td><%= concepto.tarifa %></td>
+        <td><%= number_to_currency(concepto.tarifa) %></td>
         <td><%= link_to 'Modificar', edit_concepto_path(concepto) %></td>
         <td><%= link_to 'Eliminar', concepto, method: :delete, data: { confirm: 'Está seguro?' } %></td>
       </tr>
@@ -26,5 +27,5 @@
 
 <br>
 
-<%= link_to 'New Concepto', new_concepto_path, class: "btn btn-default cust-button" %>
+<%= link_to 'Concepto nuevo', new_concepto_path, class: "btn btn-default cust-button" %>
 </div>

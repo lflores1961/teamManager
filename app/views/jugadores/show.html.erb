@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @jugador.nombre %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @jugador.numero %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @jugador.categoria %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @jugador.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @jugador.telefono %>
+</p>
+
+<p>
+  <strong>Celpapa:</strong>
+  <%= @jugador.celPapa %>
+</p>
+
+<p>
+  <strong>Celmama:</strong>
+  <%= @jugador.celMama %>
+</p>
+
+<p>
+  <strong>Tallajersey:</strong>
+  <%= @jugador.tallaJersey %>
+</p>
+
+<p>
+  <strong>Tallafunda:</strong>
+  <%= @jugador.tallaFunda %>
+</p>
+
+<%= link_to 'Edit', edit_jugador_path(@jugador) %> |
+<%= link_to 'Back', jugadores_path %>

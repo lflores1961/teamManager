@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :jugadores
+
   resources :conceptos
 
   get 'mant_menus/menuMant'

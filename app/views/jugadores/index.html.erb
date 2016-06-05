@@ -1,0 +1,45 @@
+<% provide(:title, "Jugadores") %>
+<div class="bg-2 container-fluid">
+<p id="notice"><%= notice %></p>
+
+<h4>Listado de Jugadores</h4>
+
+<table class="center">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Numero</th>
+      <th>Categoria</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Cel. padre</th>
+      <th>Cel. madre</th>
+      <th>Talla jersey</th>
+      <th>Talla funda</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jugadores.each do |jugador| %>
+      <tr>
+        <td><%= jugador.nombre %></td>
+        <td><%= jugador.numero %></td>
+        <td><%= jugador.categoria %></td>
+        <td><%= jugador.direccion %></td>
+        <td><%= jugador.telefono %></td>
+        <td><%= jugador.celPapa %></td>
+        <td><%= jugador.celMama %></td>
+        <td><%= jugador.tallaJersey %></td>
+        <td><%= jugador.tallaFunda %></td>
+        <td><%= link_to 'Modificar', edit_jugador_path(jugador) %></td>
+        <td><%= link_to 'Eliminar', jugador, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Jugador nuevo', new_jugador_path, class: "btn btn-default cust-button" %>
+</div>

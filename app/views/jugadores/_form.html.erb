@@ -1,0 +1,53 @@
+<div class="bg-2">
+<%= form_for(@jugador) do |f| %>
+  <% if @jugador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jugador.errors.count, "errores") %> impidieron que se guardara este jugaor:</h2>
+
+      <ul>
+      <% @jugador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field-tm">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field-tm">
+    <%= f.label :numero %><br>
+    <%= f.number_field :numero %>
+  </div>
+  <div class="field-tm">
+    <%= f.label :categoria %><br>
+    <%= f.number_field :categoria %>
+  </div>
+  <div class="field-tm">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field-tm">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field-tm">
+    <%= f.label :celPapa %><br>
+    <%= f.text_field :celPapa %>
+  </div>
+  <div class="field-tm">
+    <%= f.label :celMama %><br>
+    <%= f.text_field :celMama %>
+  </div>
+  <div class="field-tm">
+    <%= f.label :tallaJersey %><br>
+    <%= f.text_field :tallaJersey %>
+  </div>
+  <div class="field">
+    <%= f.label :tallaFunda %><br>
+    <%= f.text_field :tallaFunda %>
+  </div>
+  <%= f.submit "Guardar", class: "btn btn-default" %>
+<% end %>
+</div>
