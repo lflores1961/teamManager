@@ -2,8 +2,7 @@
 <%= form_for(@concepto) do |f| %>
   <% if @concepto.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@concepto.errors.count, "errores") %> impidieron que este concepto se guarde:</h2>
-
+      <h4><%= pluralize(@concepto.errors.count, "errores") %> impidieron que este concepto se guarde:</h4>
       <ul>
       <% @concepto.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -13,12 +12,10 @@
   <% end %>
 
   <div class="field-tm">
-    <%= f.label :name, "Nombre del concepto:" %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder => "Nombre del concepto" %>
   </div>
   <div class="field-tm">
-    <%= f.label :tarifa, "Tarifa por jugador:" %><br>
-    <%= f.text_field :tarifa %>
+    <%= f.text_field :tarifa, :placeholder => "Tarifa por jugador" %>
   </div>
   <div>
     <%= f.submit "Guardar", class: "btn btn-default" %>

@@ -2,7 +2,7 @@
 <%= form_for(@jugador) do |f| %>
   <% if @jugador.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@jugador.errors.count, "errores") %> impidieron que se guardara este jugaor:</h2>
+      <h4><%= pluralize(@jugador.errors.count, "errores") %> impidieron que se guardara este jugaor:</h4>
 
       <ul>
       <% @jugador.errors.full_messages.each do |message| %>
@@ -13,40 +13,32 @@
   <% end %>
 
   <div class="field-tm">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, :placeholder => "Nombre" %>
   </div>
   <div class="field-tm">
-    <%= f.label :numero %><br>
-    <%= f.number_field :numero %>
+    <%= f.number_field :numero, :placeholder => "Número de Jersey" %>
   </div>
   <div class="field-tm">
-    <%= f.label :categoria %><br>
-    <%= f.number_field :categoria %>
+    <%= f.label :categoria, "Categoría" %>
+    <%= f.collection_select :categoria, @categorias, :name, :name, include_blank: true, placeholder: "Categoría" %>
   </div>
   <div class="field-tm">
-    <%= f.label :direccion %><br>
-    <%= f.text_field :direccion %>
+    <%= f.text_field :direccion, :placeholder => "Dirección" %>
   </div>
   <div class="field-tm">
-    <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
+    <%= f.text_field :telefono, :placeholder => "Teléfono" %>
   </div>
   <div class="field-tm">
-    <%= f.label :celPapa %><br>
-    <%= f.text_field :celPapa %>
+    <%= f.text_field :celPapa, :placeholder => "Cel. Padre" %>
   </div>
   <div class="field-tm">
-    <%= f.label :celMama %><br>
-    <%= f.text_field :celMama %>
+    <%= f.text_field :celMama, :placeholder => "Cel. Madre" %>
   </div>
   <div class="field-tm">
-    <%= f.label :tallaJersey %><br>
-    <%= f.text_field :tallaJersey %>
+    <%= f.text_field :tallaJersey, :placeholder => "Talla Jersey" %>
   </div>
   <div class="field">
-    <%= f.label :tallaFunda %><br>
-    <%= f.text_field :tallaFunda %>
+    <%= f.text_field :tallaFunda, :placeholder => "Talla Funda" %>
   </div>
   <%= f.submit "Guardar", class: "btn btn-default" %>
 <% end %>

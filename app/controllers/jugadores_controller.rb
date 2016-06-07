@@ -15,10 +15,12 @@ class JugadoresController < ApplicationController
   # GET /jugadores/new
   def new
     @jugador = Jugador.new
+    @categorias = Categoria.all
   end
 
   # GET /jugadores/1/edit
   def edit
+    @categorias = Categoria.all
   end
 
   # POST /jugadores
