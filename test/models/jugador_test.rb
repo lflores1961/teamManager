@@ -21,4 +21,9 @@ class JugadorTest < ActiveSupport::TestCase
     assert_not @player.valid?
   end
 
+  test "categoria must exist" do
+    @player.categoria = ""
+    assert_not @player.valid?
+  end
+
 end

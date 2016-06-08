@@ -27,7 +27,8 @@ class JugadoresController < ApplicationController
   # POST /jugadores.json
   def create
     @jugador = Jugador.new(jugador_params)
-
+    @categorias = Categoria.all
+    
     respond_to do |format|
       if @jugador.save
         format.html { redirect_to jugadores_url, notice: 'Jugador was successfully created.' }

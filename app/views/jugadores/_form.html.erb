@@ -2,7 +2,7 @@
 <%= form_for(@jugador) do |f| %>
   <% if @jugador.errors.any? %>
     <div id="error_explanation">
-      <h4><%= pluralize(@jugador.errors.count, "errores") %> impidieron que se guardara este jugaor:</h4>
+      <h4><%= pluralize(@jugador.errors.count, "errores") %> impidieron que se guardara este jugador:</h4>
 
       <ul>
       <% @jugador.errors.full_messages.each do |message| %>
@@ -20,7 +20,7 @@
   </div>
   <div class="field-tm">
     <%= f.label :categoria, "Categoría" %>
-    <%= f.collection_select :categoria, @categorias, :name, :name, include_blank: true, placeholder: "Categoría" %>
+    <%= f.collection_select :categoria, @categorias, :name, :name, include_blank: true %>
   </div>
   <div class="field-tm">
     <%= f.text_field :direccion, :placeholder => "Dirección" %>
