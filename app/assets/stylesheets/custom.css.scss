@@ -97,6 +97,7 @@ table.center {
 th,td {
     background-color: $my-green;
     color: white;
+    text-align: left;
   }
 
 p#notice {
@@ -194,4 +195,14 @@ input {
   .form-control {
     color: #80002a;
   }
+}
+
+/* Miscelaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box-sizing;
 }

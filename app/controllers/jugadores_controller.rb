@@ -28,10 +28,10 @@ class JugadoresController < ApplicationController
   def create
     @jugador = Jugador.new(jugador_params)
     @categorias = Categoria.all
-    
+
     respond_to do |format|
       if @jugador.save
-        format.html { redirect_to jugadores_url, notice: 'Jugador was successfully created.' }
+        format.html { redirect_to jugadores_url, notice: 'Se ha creado exitosamente el registro del nuevo jugador.' }
         format.json { render :show, status: :created, location: @jugador }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class JugadoresController < ApplicationController
   def update
     respond_to do |format|
       if @jugador.update(jugador_params)
-        format.html { redirect_to jugadores_url, notice: 'Jugador was successfully updated.' }
+        format.html { redirect_to jugadores_url, notice: 'Se ha modificado exitosamente el registro del jugador.' }
         format.json { render :show, status: :ok, location: @jugador }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class JugadoresController < ApplicationController
   def destroy
     @jugador.destroy
     respond_to do |format|
-      format.html { redirect_to jugadores_url, notice: 'Jugador was successfully destroyed.' }
+      format.html { redirect_to jugadores_url, notice: 'Se ha eliminado exitosamente el registro del jugador.' }
       format.json { head :no_content }
     end
   end

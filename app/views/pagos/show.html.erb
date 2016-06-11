@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Concepto:</strong>
+  <%= @pago.concepto %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @pago.cantidad %>
+</p>
+
+<p>
+  <strong>Jugador:</strong>
+  <%= @pago.jugador %>
+</p>
+
+<%= link_to 'Edit', edit_pago_path(@pago) %> |
+<%= link_to 'Back', pagos_path %>

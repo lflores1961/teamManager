@@ -1,9 +1,14 @@
+![alt text](https://github.com/lflores1961/teamManager/app/assets/images/ClipbrdTeamManager.png "Team Manager")
 # Team Manager
-This is a attempt to create a helpfull tool for any amateur sports organization
-basically with payments. The goal is to distribute the basic app freely
-and then charge a subscription and monthly fee for more sophisticated features.
+------
+This simple application pretends to help any amateur sport organizer/manager to
+collect payments/fees from players, like uniforms fees, league inscription fee,
+etc.
+Payment / fee concepts are user defined as well as players categories.
 
-This app will be designed for mobile devices using bootstrap
-and nothing out of the world about money handling, just a 
-way to record what players have to pay to the organization
-and reporting.
+### Version.
+This is **version 1.0.0** and is intended to provide just the basic minimum help to
+record basic information about players and collect payments/fees providing a simple global report.
+
+### Author / maintainer.
+You can contact Luis Fernando Flores Oviedo for comments.

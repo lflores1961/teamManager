@@ -1,49 +1,56 @@
+<% provide(:title, "Jugadores") %>
+<div class="bg-2 container-fluid">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @jugador.nombre %>
-</p>
+<table class="center">
+  <tbody>
+    <tr>
+      <td><strong>Nombre:</strong></td>
+      <td><%= @jugador.nombre %></td>
+    </tr>
 
-<p>
-  <strong>Numero:</strong>
-  <%= @jugador.numero %>
-</p>
+    <tr>
+      <td><strong>Número:</strong></td>
+      <td><%= @jugador.numero %></td>
+    </tr>
 
-<p>
-  <strong>Categoria:</strong>
-  <%= @jugador.categoria %>
-</p>
+    <tr>
+      <td><strong>Categoría:</strong></td>
+      <td><%= @jugador.categoria %></td>
+    </tr>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @jugador.direccion %>
-</p>
+    <tr>
+      <td><strong>Dirección:</strong></td>
+      <td><%= @jugador.direccion %></td>
+    </tr>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @jugador.telefono %>
-</p>
+    <tr>
+      <td><strong>Teléfono:</strong></td>
+      <td><%= @jugador.telefono %></td>
+    </tr>
 
-<p>
-  <strong>Celpapa:</strong>
-  <%= @jugador.celPapa %>
-</p>
+    <tr>
+      <td><strong>Celular padre:</strong></td>
+      <td><%= @jugador.celPapa %></td>
+    </tr>
 
-<p>
-  <strong>Celmama:</strong>
-  <%= @jugador.celMama %>
-</p>
+    <tr>
+      <td><strong>Celular madre:</strong></td>
+      <td><%= @jugador.celMama %></td>
+    </tr>
 
-<p>
-  <strong>Tallajersey:</strong>
-  <%= @jugador.tallaJersey %>
-</p>
+    <tr>
+      <td><strong>Talla jersey:</strong></td>
+      <td><%= @jugador.tallaJersey %></td>
+    </tr>
 
-<p>
-  <strong>Tallafunda:</strong>
-  <%= @jugador.tallaFunda %>
-</p>
+    <tr>
+      <td><strong>Talla pants:</strong></td>
+      <td><%= @jugador.tallaFunda %></td>
+    </tr>
+  </tbody>
+</table>
 
-<%= link_to 'Edit', edit_jugador_path(@jugador) %> |
-<%= link_to 'Back', jugadores_path %>
+<%= link_to 'Modificar', edit_jugador_path(@jugador), class: "glyphicon glyphicon-edit" %> |
+<%= link_to 'Regresar', jugadores_path %>
+</div>

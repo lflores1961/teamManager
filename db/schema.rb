@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606194112) do
+ActiveRecord::Schema.define(version: 20160609192700) do
 
   create_table "categorias", force: :cascade do |t|
     t.string   "name"
@@ -39,5 +39,16 @@ ActiveRecord::Schema.define(version: 20160606194112) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "pagos", force: :cascade do |t|
+    t.string   "concepto"
+    t.decimal  "cantidad"
+    t.integer  "jugador_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "pagos", ["jugador_id", "created_at"], name: "index_pagos_on_jugador_id_and_created_at"
+  add_index "pagos", ["jugador_id"], name: "index_pagos_on_jugador_id"
 
 end

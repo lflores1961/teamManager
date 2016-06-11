@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  concepto: MyString
+  cantidad: 9.99
+  jugador_id: 
+
+two:
+  concepto: MyString
+  cantidad: 9.99
+  jugador_id: 

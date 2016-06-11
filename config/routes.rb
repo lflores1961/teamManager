@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :pagos
+
   resources :jugadores
 
   resources :conceptos
