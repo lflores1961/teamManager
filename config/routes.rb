@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :pagos
-
   resources :jugadores
+
+  resources :pagos
+  # Need to include some rule for jugadores#paga
 
   resources :conceptos
 

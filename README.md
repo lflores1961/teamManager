@@ -1,4 +1,4 @@
-![alt text](https://github.com/lflores1961/teamManager/app/assets/images/ClipbrdTeamManager.png "Team Manager")
+![alt text](https://github.com/lflores1961/teamManager/app/assets/images/ClipbrdTeamManagerSmall.png "Team Manager")
 # Team Manager
 ------
 This simple application pretends to help any amateur sport organizer/manager to

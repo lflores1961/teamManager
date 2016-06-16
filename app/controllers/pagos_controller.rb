@@ -7,11 +7,7 @@ class PagosController < ApplicationController
     @pagos = Pago.all
   end
 
-  # GET /pagos/selec
-  def selec
-  end
-
-  # GET /pagos/1
+    # GET /pagos/1
   # GET /pagos/1.json
   def show
   end

@@ -5,6 +5,15 @@ class PagosControllerTest < ActionController::TestCase
     @pago = pagos(:one)
   end
 
+  # When and if we use the nested resources in config/routes.rb like:
+  # resources :jugadores do
+  #   resources :pagos
+  # end
+  # that will generate routes like:
+  # /jugadores/:jugador_id/pagos
+  # we have to use this:
+  # get :index, :jugador_id => 1
+  
   test "should get index" do
     get :index
     assert_response :success

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h4>Pagos:</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Concepto</th>
+      <th>Cantidad</th>
+      <th>Saldo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pagos.each do |pago| %>
+    <% saldo = Concepto.find_by(:name, pago.concepto).tarifa %>
+      <tr>
+        <td><%= pago.created_at.to_date %></td>
+        <td><%= pago.concepto %></td>
+        <td><%= pago.cantidad %></td>
+        <td><%= saldo - cantidad %></td>
+        <td><%= link_to 'Show', pago %></td>
+        <td><%= link_to 'Edit', edit_pago_path(pago) %></td>
+        <td><%= link_to 'Destroy', pago, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pago', new_pago_path %>

@@ -3,9 +3,9 @@
 one:
   concepto: MyString
   cantidad: 9.99
-  jugador_id: 
+  jugador_id: 1
 
 two:
   concepto: MyString
   cantidad: 9.99
-  jugador_id: 
+  jugador_id: 2

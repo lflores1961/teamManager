@@ -1,5 +1,5 @@
 class JugadoresController < ApplicationController
-  before_action :set_jugador, only: [:show, :edit, :update, :destroy]
+  before_action :set_jugador, only: [:show, :edit, :update, :destroy, :paga]
 
   # GET /jugadores
   # GET /jugadores.json
@@ -10,6 +10,8 @@ class JugadoresController < ApplicationController
   # GET /jugadores/1
   # GET /jugadores/1.json
   def show
+    # puts "los parametros! " + params.to_s
+    @jugador = Jugador.find(params[:id])
   end
 
   # GET /jugadores/new
@@ -62,6 +64,11 @@ class JugadoresController < ApplicationController
       format.html { redirect_to jugadores_url, notice: 'Se ha eliminado exitosamente el registro del jugador.' }
       format.json { head :no_content }
     end
+  end
+
+  # GET /jugadores/1/paga
+  def paga
+    
   end
 
   private
