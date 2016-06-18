@@ -18,9 +18,9 @@
       <tr>
         <td><%= concepto.name %></td>
         <td><%= number_to_currency(concepto.tarifa) %></td>
-        <td><%= link_to 'Modificar', edit_concepto_path(concepto) %></td>
-        <td><%= link_to 'Eliminar', concepto, method: :delete, data: { confirm: 'Está seguro?' } %></td>
-      </tr>
+        <td><%= link_to '', edit_concepto_path(concepto), class: "glyphicon glyphicon-edit" %></td>
+        <td><%= link_to '', concepto, class: "glyphicon glyphicon-trash", method: :delete,
+          data: { confirm: 'Está seguro?' } %></td>
     <% end %>
   </tbody>
 </table>

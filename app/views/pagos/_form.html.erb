@@ -1,3 +1,4 @@
+<div class="bg-2">
 <%= form_for(@pago) do |f| %>
   <% if @pago.errors.any? %>
     <div id="error_explanation">
@@ -11,19 +12,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :concepto %><br>
-    <%= f.text_field :concepto %>
+  <div class="field-tm">
+    <%= f.label :concepto %>
+    <%= f.collection_select :concepto, @conceptos, :name, :name, include_blank: true %>
   </div>
-  <div class="field">
-    <%= f.label :cantidad %><br>
-    <%= f.text_field :cantidad %>
+  <div class="field-tm">
+    <%= f.text_field :cantidad, :placeholder => "Cantidad a pagar" %>
   </div>
-  <div class="field">
-    <%= f.label :jugador_id %><br>
-    <%= f.text_field :jugador_id %>
-  </div>
+  <%= f.hidden_field :jugador_id, :value => params[:jugador_id] %>
+
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Registrar Pago", class: "btn btn-default"%>
   </div>
 <% end %>
+</div>

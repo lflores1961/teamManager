@@ -13,7 +13,8 @@
     <div class="col-xs-12">
       <%= image_tag("ClipbrdTeamManager.png", size: "100x60", alt: "Clip team manager") %>
       <p id="logo">TEAM MANAGER</p>
-      <%= link_to "Inicio", root_path,  class: "navbar-right"%>
+      <%= link_to "Inicio", root_path,  class: "navbar-right btn btn-xs" %>
+      <%= link_to "Regresar", request.env['HTTP_REFERER'], class: "navbar-right btn btn-xs" %>
     </div>
   </div>
 </div>

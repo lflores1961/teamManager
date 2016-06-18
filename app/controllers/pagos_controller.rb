@@ -14,7 +14,10 @@ class PagosController < ApplicationController
 
   # GET /pagos/new
   def new
+    # puts params[:jugador_id]
     @pago = Pago.new
+    @conceptos = Concepto.all
+    @jugador = Jugador.find_by(id: params[:jugador_id])
   end
 
   # GET /pagos/1/edit
@@ -24,11 +27,13 @@ class PagosController < ApplicationController
   # POST /pagos
   # POST /pagos.json
   def create
-    @pago = Pago.new(pago_params)
+    @jugador = Jugador.find_by(id: params[:pago][:jugador_id])
+    @pago = @jugador.pagos.build(pago_params)
+    #@pago.jugador_id = params[:jugador_id]
 
     respond_to do |format|
       if @pago.save
-        format.html { redirect_to @pago, notice: 'Pago was successfully created.' }
+        format.html { redirect_to jugadores_path, notice: 'Se ha registrado exitosamente el pago.' }
         format.json { render :show, status: :created, location: @pago }
       else
         format.html { render :new }

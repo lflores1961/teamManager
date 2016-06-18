@@ -25,6 +25,18 @@ textarea {
   resize: vertical;
 }
 
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
 .center {
   text-align: center;
   h1 {
@@ -49,6 +61,17 @@ textarea {
   text-align: center;
 }
 
+.btn-xs {
+    color: $my-green;
+    background-color: $gray-medium-light;
+    padding: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    a:link {
+      color: $my-green;
+    }
+  }
+
 .btn-default {
   color: white;
   background-color: $my-green;
@@ -64,7 +87,7 @@ textarea {
 }
 
 .button:visited {
-    color: white;
+    color: auto;
 }
 
 .footer {
@@ -87,6 +110,8 @@ table, th, td {
 table {
     border-spacing: 10px;
     background-color: $my-green;
+    margin-top: auto;
+    margin-bottom: 20px;
 }
 
 table.center {
@@ -102,18 +127,6 @@ th,td {
 
 p#notice {
   color: $my-green;
-}
-
-a:link {
-  color: white;
-}
-
-a:visited {
-  color: white;
-}
-
-a:active {
-  color: white;
 }
 
 /* Typography */
@@ -195,6 +208,10 @@ input {
   .form-control {
     color: #80002a;
   }
+}
+
+.navbar-right {
+  margin-right: 5px;
 }
 
 /* Miscelaneous */

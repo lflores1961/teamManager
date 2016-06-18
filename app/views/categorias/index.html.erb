@@ -15,8 +15,9 @@
     <% @categorias.each do |categoria| %>
       <tr>
         <td><%= categoria.name %></td>
-        <td><%= link_to 'Modificar', edit_categoria_path(categoria) %></td>
-        <td><%= link_to 'Eliminar', categoria, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '', edit_categoria_path(categoria), class: "glyphicon glyphicon-edit" %></td>
+        <td><%= link_to '', categoria, class: "glyphicon glyphicon-trash", method: :delete,
+          data: { confirm: 'Está seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

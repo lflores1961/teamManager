@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :pagos
   # Need to include some rule for jugadores#paga
+  get 'jugadores/:jugador_id/paga' => 'pagos#new', as: :pagar
 
   resources :conceptos
 
