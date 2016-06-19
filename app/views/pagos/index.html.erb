@@ -18,14 +18,6 @@
         <td><%= pago.concepto %></td>
         <td><%= pago.cantidad %></td>
         <td><%= pago.jugador %></td>
-        <td><%= link_to 'Show', pago %></td>
-        <td><%= link_to 'Edit', edit_pago_path(pago) %></td>
-        <td><%= link_to 'Destroy', pago, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Pago', new_pago_path %>

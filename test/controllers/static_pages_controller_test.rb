@@ -4,7 +4,7 @@ class StaticPagesControllerTest < ActionController::TestCase
 
   def setup
     @base_title = "TEAM MANAGER"
-    @opciones = ['Registro de Jugadores', 'Registro de Pagos', 'Mantenimiento', 'Consulta Jugador', 'Reporte Global PDF']
+    @opciones = ['Registro de Jugadores', 'Registro de Pagos', 'Mantenimiento', 'Reporte Global PDF']
   end
 
   test "should get main_menu" do

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :jugadores
 
-  resources :pagos
+  resources :pagos, except: :new
   # Need to include some rule for jugadores#paga
   get 'jugadores/:jugador_id/paga' => 'pagos#new', as: :pagar
 

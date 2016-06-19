@@ -3,7 +3,7 @@ require 'test_helper'
 class JugadorTest < ActiveSupport::TestCase
 
   def setup
-    @player = jugadores(:one)
+    @player = jugadores(:luis)
   end
 
   test "jugador must be valid" do

@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+luis:
   nombre: Luis
-  numero: 1
-  categoria: 1
+  numero: 10
+  categoria: Bantam
   direccion: MyString
   telefono: MyString
   celPapa: MyString
@@ -11,10 +11,10 @@ one:
   tallaJersey: MyString
   tallaFunda: MyString
 
-two:
+juan:
   nombre: Juan
-  numero: 1
-  categoria: 2
+  numero: 11
+  categoria: Bantam
   direccion: MyString
   telefono: MyString
   celPapa: MyString
