@@ -14,7 +14,12 @@
 
   <div class="field-tm">
     <%= f.label :concepto %>
-    <%= f.collection_select :concepto, @conceptos, :name, :name, include_blank: true %>
+    <%= f.collection_select :concepto, @conceptos, :name, :name, {:prompt => 'Selecciona el concepto'} %>
+
+  </div>
+  <div class="field-tm">
+
+    <%= f.label :tarifa %>: $<span id="la-tarifa"> </span>
   </div>
   <div class="field-tm">
     <%= f.text_field :cantidad, :placeholder => "Cantidad a pagar" %>

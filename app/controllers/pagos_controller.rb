@@ -14,10 +14,10 @@ class PagosController < ApplicationController
 
   # GET /pagos/new
   def new
-    # puts params[:jugador_id]
     @pago = Pago.new
     @conceptos = Concepto.all
     @jugador = Jugador.find_by(id: params[:jugador_id])
+    puts @pagos_cons
   end
 
   # GET /pagos/1/edit
@@ -61,8 +61,25 @@ class PagosController < ApplicationController
   def destroy
     @pago.destroy
     respond_to do |format|
-      format.html { redirect_to pagos_url, notice: 'Pago was successfully destroyed.' }
+      format.html { redirect_to pagos_url, notice: 'Se ha eliminado exitosamente el pago.' }
       format.json { head :no_content }
+    end
+  end
+
+  def tarifa
+    # puts params[:concept_name]
+    tarifa = Concepto.find_by(name: params[:concept_name]).tarifa
+    respond_to do |format|
+      format.json { render json: {tarifa: tarifa} }
+    end
+  end
+
+  def consol_pagos
+    jugador = Jugador.find(params[:jugador])
+    puts jugador
+    pagos_cons = jugador.pagos.group(:concepto).sum(:cantidad)
+    respond_to do |format|
+      format.json { render json: {pagos_cons: pagos_cons} }
     end
   end
 

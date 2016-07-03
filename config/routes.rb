@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   # Need to include some rule for jugadores#paga
   get 'jugadores/:jugador_id/paga' => 'pagos#new', as: :pagar
 
+  get '/tarifa/:concept_name', to: 'pagos#tarifa'
+
+  get '/pagos_cons/:jugador', to: 'pagos#consol_pagos'
+
   resources :conceptos
 
   get 'mant_menus/menuMant'

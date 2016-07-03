@@ -1,0 +1,35 @@
+$(document).ready( function(){
+  $("#pago_concepto").change( function(){
+    var miConcepto = $("#pago_concepto").val();
+    $.getJSON('/tarifa/' + miConcepto, function(data) {
+      var tarifa = data.tarifa;
+      $("#la-tarifa").text(tarifa);
+    });
+  });
+  $("#pago_cantidad").change( function(){
+    var jugador = $("#pago_jugador_id").val();
+    $.getJSON('/pagos_cons/' + jugador, function(data) {
+      var pagos = data.pagos_cons
+      var pago = $("#pago_cantidad").val();
+      var tarifa = $("#la-tarifa").text().valueOf();
+      var concepto = $("#pago_concepto").val();
+      console.log(pagos[concepto])
+      if ((pagos[concepto] == tarifa)) {
+        alert("El total de la tarifa del concepto ha sido cubierto.");
+        $("#pago_cantidad").val("").focus("#pago_cantidad");
+      }
+      if (pago > tarifa) {
+        alert("El pago no puede ser mayor a la tarifa del concepto.");
+        $("#pago_cantidad").val("").focus("#pago_cantidad");
+      }
+      if (pago > pagos[concepto]) {
+        alert("El pago exede la suma de los pagos realizados sobre concepto.");
+        $("#pago_cantidad").val("").focus("#pago_cantidad");
+      }
+      if ((pago + pagos[concepto]) > tarifa) {
+        alert("La suma de los pagos exede la tarifa del concepto.");
+        $("#pago_cantidad").val("").focus("#pago_cantidad");
+      }
+    });
+  });
+});

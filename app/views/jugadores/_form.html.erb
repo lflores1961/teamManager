@@ -20,7 +20,7 @@
   </div>
   <div class="field-tm">
     <%= f.label :categoria, "Categoría" %>
-    <%= f.collection_select :categoria, @categorias, :name, :name, include_blank: true %>
+    <%= f.collection_select :categoria, @categorias, :name, :name %>
   </div>
   <div class="field-tm">
     <%= f.text_field :direccion, :placeholder => "Dirección" %>
@@ -35,10 +35,12 @@
     <%= f.text_field :celMama, :placeholder => "Cel. Madre" %>
   </div>
   <div class="field-tm">
-    <%= f.text_field :tallaJersey, :placeholder => "Talla Jersey" %>
+    <%= f.label :tallaJersey, "Talla de Jersey: " %>
+    <%= f.select :tallaJersey, @tallas %>
   </div>
   <div class="field">
-    <%= f.text_field :tallaFunda, :placeholder => "Talla Pants" %>
+    <%= f.label :tallaFunda, "Talla de Pantalón: " %>
+    <%= f.select :tallaFunda, @tallas %>
   </div>
   <%= f.submit "Guardar", class: "btn btn-default" %>
 <% end %>
