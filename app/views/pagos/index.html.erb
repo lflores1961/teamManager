@@ -15,12 +15,9 @@
   <tbody>
     <% @pagos.each do |pago| %>
       <tr>
-          <td><%= pago.created_at.to_date %></td>
-          <td><%= pago.concepto %></td>
-          <td><%= concep.tarifa %></td>
-          <td><%= pago.cantidad %></td>
-          <td><%= concep.tarifa - pago.cantidad %></td>
-      </tr>
+        <td><%= pago.concepto %></td>
+        <td><%= pago.cantidad %></td>
+        <td><%= pago.jugador %></td>
     <% end %>
   </tbody>
 </table>
