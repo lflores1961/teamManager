@@ -5,7 +5,6 @@
 <table class="center">
   <thead>
     <tr>
-      <th>Fecha</th>
       <th>Concepto</th>
       <th>Tarifa</th>
       <th>Pago</th>
@@ -14,14 +13,13 @@
   </thead>
 
   <tbody>
-    <% @pagos.each do |pago| %>
-    <% concep = Concepto.find_by(name: pago.concepto) %>
+    <% @pagos.each do |key, amount| %>
+      <% tarifa = @conceptos.find_by(name: key).tarifa %>
       <tr>
-        <td><%= pago.created_at.to_date %></td>
-        <td><%= pago.concepto %></td>
-        <td><%= concep.tarifa %></td>
-        <td><%= pago.cantidad %></td>
-        <td><%= concep.tarifa - pago.cantidad %></td>
+        <td><%= key %></td>
+        <td><%= tarifa %></td>
+        <td><%= amount %></td>
+        <td><%= tarifa - amount %></td>
       </tr>
     <% end %>
   </tbody>

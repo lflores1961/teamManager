@@ -12,9 +12,9 @@ class JugadoresController < ApplicationController
   # GET /jugadores/1
   # GET /jugadores/1.json
   def show
-    # puts "los parametros! " + params.to_s
     @jugador = Jugador.find(params[:id])
-    @pagos = @jugador.pagos
+    @pagos = @jugador.pagos.group(:concepto).sum(:cantidad)
+    @conceptos = Concepto.all
   end
 
   # GET /jugadores/new
