@@ -15,7 +15,6 @@ class JugadoresController < ApplicationController
     # puts "los parametros! " + params.to_s
     @jugador = Jugador.find(params[:id])
     @pagos = @jugador.pagos
-
   end
 
   # GET /jugadores/new

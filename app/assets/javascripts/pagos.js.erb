@@ -9,27 +9,33 @@ $(document).ready( function(){
   $("#pago_cantidad").change( function(){
     var jugador = $("#pago_jugador_id").val();
     $.getJSON('/pagos_cons/' + jugador, function(data) {
-      var pagos = data.pagos_cons
-      var pago = $("#pago_cantidad").val();
-      var tarifa = $("#la-tarifa").text().valueOf();
+      var pagos = data.pagos_cons;
+      var pago = parseFloat($("#pago_cantidad").val());
+      var tarifa = parseFloat($("#la-tarifa").text());
       var concepto = $("#pago_concepto").val();
-      console.log(pagos[concepto])
-      if ((pagos[concepto] == tarifa)) {
-        alert("El total de la tarifa del concepto ha sido cubierto.");
-        $("#pago_cantidad").val("").focus("#pago_cantidad");
-      }
+      var pag_in = pagos[concepto];
+      var pagado = parseFloat(pag_in);
+      var pret_pago = parseFloat(pagado) + parseFloat(pago);
+      parseFloat(pret_pago);
+
       if (pago > tarifa) {
         alert("El pago no puede ser mayor a la tarifa del concepto.");
-        $("#pago_cantidad").val("").focus("#pago_cantidad");
-      }
-      if (pago > pagos[concepto]) {
-        alert("El pago exede la suma de los pagos realizados sobre concepto.");
-        $("#pago_cantidad").val("").focus("#pago_cantidad");
-      }
-      if ((pago + pagos[concepto]) > tarifa) {
+        $("#pago_cantidad").val(undefined);
+        $("#pago_cantidad").focus();
+
+      } else if (pret_pago > tarifa) {
         alert("La suma de los pagos exede la tarifa del concepto.");
-        $("#pago_cantidad").val("").focus("#pago_cantidad");
+        $("#pago_cantidad").val(undefined);
+        $("#pago_cantidad").focus();
+
       }
+
+      if (pago > pagado) {
+        alert("El pago exede la suma de los pagos realizados sobre concepto.");
+        $("#pago_cantidad").val(undefined);
+        $("#pago_cantidad").focus();
+      }
+
     });
   });
 });

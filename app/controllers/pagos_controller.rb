@@ -17,7 +17,6 @@ class PagosController < ApplicationController
     @pago = Pago.new
     @conceptos = Concepto.all
     @jugador = Jugador.find_by(id: params[:jugador_id])
-    puts @pagos_cons
   end
 
   # GET /pagos/1/edit

@@ -22,7 +22,7 @@
     <%= f.label :tarifa %>: $<span id="la-tarifa"> </span>
   </div>
   <div class="field-tm">
-    <%= f.text_field :cantidad, :placeholder => "Cantidad a pagar" %>
+    <%= f.number_field :cantidad, :placeholder => "Cantidad a pagar" %>
   </div>
   <%= f.hidden_field :jugador_id, :value => params[:jugador_id] %>
 
