@@ -62,6 +62,10 @@ a:active {
   text-align: center;
 }
 
+.clearfix {
+    overflow: auto;
+}
+
 .btn {
   font-size: 1em;
   a {
@@ -128,6 +132,9 @@ table.center {
   margin-right: auto;
 }
 
+table.index {
+  font-size: .95em
+}
 th,td {
     background-color: $my-green;
     color: white;

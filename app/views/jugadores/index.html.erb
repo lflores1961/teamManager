@@ -4,12 +4,12 @@
 
 <h4>Listado de Jugadores</h4>
 
-<table class="center">
+<table class="center index .clearfix">
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Número</th>
-      <th>Categoria</th>
+      <th>No.</th>
+      <th>Categoría</th>
       <th colspan="5">Acciones</th>
     </tr>
   </thead>
@@ -20,10 +20,10 @@
         <td><%= jugador.nombre %></td>
         <td><%= jugador.numero %></td>
         <td><%= jugador.categoria %></td>
-        <td><%= link_to '', pagar_path(jugador), class: "glyphicon glyphicon-usd" %></td>
-        <td><%= link_to '', jugador_path(jugador), class: "glyphicon glyphicon-eye-open" %></td>
-        <td><%= link_to '', edit_jugador_path(jugador), class: "glyphicon glyphicon-edit" %></td>
-        <td><%= link_to '', jugador, class: "glyphicon glyphicon-trash", method: :delete, data: { confirm: 'Está seguro?' } %></td>
+        <td><%= link_to '  ', pagar_path(jugador), class: "glyphicon glyphicon-usd" %></td>
+        <td><%= link_to '  ', jugador_path(jugador), class: "glyphicon glyphicon-eye-open" %></td>
+        <td><%= link_to '  ', edit_jugador_path(jugador), class: "glyphicon glyphicon-edit" %></td>
+        <td><%= link_to '  ', jugador, class: "glyphicon glyphicon-trash", method: :delete, data: { confirm: 'Está seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
