@@ -67,9 +67,16 @@ class JugadoresController < ApplicationController
     end
   end
 
-  # GET /jugadores/1/paga
-  def paga
-
+  # /jugadores/reporte
+  def reporte
+    @jugadores = Jugador.all
+    @conceptos = Concepto.all
+    @jugadores.each do |jugador|
+      render 'reporta_jugador'
+      jugador.pagos.group(:concepto).each do |pagos|
+        render 'reporta_pagos'
+      end
+    end
   end
 
   private
