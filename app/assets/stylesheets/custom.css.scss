@@ -141,6 +141,19 @@ th,td {
     text-align: left;
   }
 
+.juga {
+  th,td {
+    background-color: 	#3CB371;
+  }
+}
+
+.subtotal {
+  th,td {
+    text-align: right;
+    background-color: 	#778b77;
+  }
+}
+
 p#notice {
   color: $my-green;
 }

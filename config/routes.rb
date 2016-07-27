@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/jugadores/reporte', to: 'jugadores#reporte'
+  
   resources :jugadores
 
   resources :pagos, except: :new

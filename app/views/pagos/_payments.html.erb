@@ -1,11 +1,6 @@
-
-  <tbody>
-    <% pagos.each do |pago| %>
       <tr>
         <td><%= pago.created_at %></td>
         <td><%= pago.concepto %></td>
         <td><%= pago.cantidad %></td>
         <td><%= pago.jugador %></td>
       </tr>
-    <% end %>
-  </tbody>

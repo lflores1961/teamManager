@@ -1,5 +1,5 @@
 class JugadoresController < ApplicationController
-  before_action :set_jugador, only: [:show, :edit, :update, :destroy, :paga]
+  before_action :set_jugador, only: [:show, :edit, :update, :destroy]
   before_action :set_tallas, only: [:new, :edit]
   before_action :set_categorias, only: [:new, :edit, :create]
 
@@ -71,12 +71,13 @@ class JugadoresController < ApplicationController
   def reporte
     @jugadores = Jugador.all
     @conceptos = Concepto.all
-    @jugadores.each do |jugador|
-      render 'reporta_jugador'
-      jugador.pagos.group(:concepto).each do |pagos|
-        render 'reporta_pagos'
-      end
-    end
+    # This commented block goes inside the app/views/jugadores/reporte.html.erb
+    #  use 'yield' instead of 'render'
+    # @jugadores.each do |jugador|
+      # render 'reporta_jugador'
+      # pagos = jugador.pagos.group(:concepto)
+        # render 'reporta_pagos'
+    # end
   end
 
   private
