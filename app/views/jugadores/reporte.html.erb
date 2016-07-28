@@ -2,7 +2,7 @@
 <div class="bg-2 container-fluid">
   <p id="notice"><%= notice %></p>
 
-  <h1>Reporte Global de Pagos</h1>
+  <h1>Reporte de Pagos</h1>
 
   <table class="center index clearfix">
     <thead>
@@ -25,7 +25,7 @@
           <tr>
             <td><%= pago.created_at %></td>
             <td><%= pago.concepto %></td>
-            <td><%= pago.cantidad %></td>
+            <td style="text-align:right"><%= pago.cantidad %></td>
           </tr>
         <% end %>
         <tr class="subtotal">
