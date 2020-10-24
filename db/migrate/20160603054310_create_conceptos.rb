@@ -1,4 +1,4 @@
-class CreateConceptos < ActiveRecord::Migration
+class CreateConceptos < ActiveRecord::Migration[4.2]
   def change
     create_table :conceptos do |t|
       t.string :name

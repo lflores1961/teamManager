@@ -1,4 +1,4 @@
-class Concepto < ActiveRecord::Base
+class Concepto < ApplicationRecord
   validates :name,
     presence: true,
     length: { minimum: 3, maximum: 15 },

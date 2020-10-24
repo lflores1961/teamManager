@@ -1,4 +1,4 @@
-class CreateJugadores < ActiveRecord::Migration
+class CreateJugadores < ActiveRecord::Migration[4.2]
   def change
     create_table :jugadores do |t|
       t.string :nombre

@@ -198,6 +198,9 @@ h2 {
 }
 
 /* Forms */
+::placeholder {
+  color: #98b5af;
+}
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
