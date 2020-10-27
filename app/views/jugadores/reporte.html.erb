@@ -23,7 +23,7 @@
         <% payments = jugador.pagos %>
         <% payments.each do |pago| %>
           <tr>
-            <td><%= pago.created_at %></td>
+            <td><%= pago.created_at.strftime("%d-%b-%Y") %></td>
             <td><%= pago.concepto %></td>
             <td style="text-align:right"><%= pago.cantidad %></td>
           </tr>
