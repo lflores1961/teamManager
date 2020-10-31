@@ -20,21 +20,18 @@
     <tbody>
       <% @jugadores.each do |jugador| %>
         <%= render jugador %>
-        <% payments = jugador.pagos %>
-        <% payments.each do |pago| %>
+        <% jugador.pagos.each do |pago| %>
           <tr>
             <td><%= pago.created_at.strftime("%d-%b-%Y") %></td>
             <td><%= pago.concepto %></td>
-            <td style="text-align:right"><%= pago.cantidad %></td>
+            <td style="text-align:right"><%= number_to_currency(pago.cantidad) %></td>
           </tr>
         <% end %>
         <tr class="subtotal">
           <td>Subtotal:</td>
-          <td colspan="2"><%= jugador.pagos.sum(:cantidad) %></td>
+          <td colspan="2"><%= number_to_currency(jugador.pagos.sum(:cantidad)) %></td>
         </tr>
       <% end %>
-
     </tbody>
-
   </table>
 </div>

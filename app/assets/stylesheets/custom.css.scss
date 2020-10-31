@@ -115,9 +115,9 @@ a:active {
 }
 
 table, th, td {
-    border: 1px solid white;
+    /*border: 1px solid white; */
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 table {
@@ -125,6 +125,7 @@ table {
     background-color: $my-green;
     margin-top: auto;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 table.center {
@@ -143,7 +144,8 @@ th,td {
 
 .juga {
   th,td {
-    background-color: 	#3CB371;
+    background-color: #3a544e;
+    color: #a1c4bc;
   }
 }
 
